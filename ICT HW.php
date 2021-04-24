@@ -29,36 +29,42 @@
 <h1 style="font-family: 'Oswald', sans-serif;color: white; text-align: center;">Online Library Database</h1>
 	<table border="2" align="center" cellpadding="5" cellspacing="5">
 <tr>
-<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter ISBN :</td>
-<td> <input type="text" name="isbn" size="40" class="submit"> </td>
+	<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter ISBN :</td>
+	<td> <input type="text" name="isbn" size="40" class="submit"> </td>
 </tr>
 <tr>
-<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Title :</td>
-<td> <input type="text" name="title" size="40" class="submit"> </td>
+	<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Title :</td>
+	<td> <input type="text" name="title" size="40" class="submit"> </td>
 </tr>
 <tr>
-<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Author :</td>
-<td> <input type="text" name="author" size="40" class="submit"> </td>
+	<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Author :</td>
+	<td> <input type="text" name="author" size="40" class="submit"> </td>
 </tr>
 <tr>
-<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Edition :</td>
-<td> <input type="text" name="edition" size="40" class="submit"> </td>
+	<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Edition :</td>
+	<td> <input type="text" name="edition" size="40" class="submit"> </td>
 </tr>
 <tr>
-<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Publication: </td>
-<td> <input type="text" name="publication" size="40" class="submit"> </td>
+	<td style="font-family: 'Oswald', sans-serif;color: white; font-size: 25px"> Enter Publication: </td>
+	<td> <input type="text" name="publication" size="40" class="submit"> </td>
 </tr>
+
 <tr>
-<td></td>
-<td>
-<input type="submit" value="Submit" class="submit">
-<input type="reset" value="Reset" class="submit">
-</td>
+<td><input type="submit" value="Submit" class="submit"><input type="reset" value="Reset" class="submit"></td>
 </tr>
 </table>
 </form>
-</body>
-</html>
 
+<?php
+
+	$isbn=$_POST["isbn"];
+	$title=$_POST["title"];
+	$author=$_POST["author"];
+	$edition=$_POST["edition"];
+	$publication=$_POST["publication"];
+
+	$query = "insert into library database (isbn,title,author,edition,publication) values($isbn,$title,$author,$edition,$publication)";
+
+?>
 </body>
 </html>
