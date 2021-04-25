@@ -65,6 +65,13 @@
 
 	$query = "insert into library database (isbn,title,author,edition,publication) values($isbn,$title,$author,$edition,$publication)";
 
+// Create connection
+$conn = new mysqli(localhost, root,"", obmc_mirchandanihw);
+// Check connection
+if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+}
+  echo "Connected successfully";
 ?>
 </body>
 </html>
