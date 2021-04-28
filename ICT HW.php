@@ -63,7 +63,7 @@
 	$edition=$_POST["edition"];
 	$publication=$_POST["publication"];
 
-	$query = "insert into library database (isbn,title,author,edition,publication) values($isbn,$title,$author,$edition,$publication)";
+	$query = "insert into library_database (isbn,title,author,edition,publication) values($isbn,$title,$author,$edition,$publication)";
 
 // Create connection
 $conn = new mysqli(localhost, root,"", obmc_mirchandanihw);
